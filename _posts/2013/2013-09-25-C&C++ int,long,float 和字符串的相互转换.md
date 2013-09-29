@@ -61,4 +61,4 @@ memcpy方法可以实现将int等保存到字符类型的数组中。
 	float b;
 	istringstream s1("23 23.4");
 	s1>>a>>b;//对比cin
-[通过C/C++中int/long/float/double数值类型与字符串互相转换[总结]](http://space.itpub.net/14766028/viewspace-703264)
+[通过C/C++中int/long/float/double数值类型与字符串互相转换](http://space.itpub.net/14766028/viewspace-703264)
