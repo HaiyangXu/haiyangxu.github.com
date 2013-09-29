@@ -6,4 +6,14 @@ group: navigation
 ---
 {% include JB/setup %}
 
-不能用中文吗 ？
+	This is a test !
+	中文测试！
+	代码测试
+	#include <iostream> 
+	using namespace std;
+	
+	int main()
+	{	
+		cout<<"Hello MarkDown$Jekyll!"
+		return 0;
+	}
