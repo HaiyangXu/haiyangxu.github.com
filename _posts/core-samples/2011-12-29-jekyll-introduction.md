@@ -34,7 +34,7 @@ The intention here is that you can serve all contents in this folder statically 
 
 You can think of Jekyll as a normalish dynamic blog but rather than parsing content, templates, and tags
 on each request, Jekyll does this once _beforehand_ and caches the _entire website_ in a folder for serving statically.
-
+<!--more-->
 ### Jekyll is Not Blogging Software
 
 **Jekyll is a parsing engine.**

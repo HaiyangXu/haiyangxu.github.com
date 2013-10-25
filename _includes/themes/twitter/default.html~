@@ -64,7 +64,8 @@
 <script type="text/javascript"
    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
 </script>
-  
+  <!--google code prettify-->
+ <script  src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true">    
   </head>
 
   <body>

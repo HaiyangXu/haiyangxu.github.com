@@ -1,19 +1,21 @@
 ---
 layout: page
-title: Home
-tagline: ""
+title:  Haiyang Xu	
+tagline: A Computer Vision Blog
+index: hide tilte at the front 
 ---
 {% include JB/setup %}
 
-
-
-##Posts List
-
-<ul class="posts">
+##Recent Articles
+<ul>
   {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    <li>
+      <a href="{{ post.url }}"><span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}</a>
+      <p>{{ post.excerpt }}  <a href="{{ post.url }}">  more...</a> </p>
+    </li>
   {% endfor %}
 </ul>
+
 
 ## Links
 [Coursera][coursera]   [GitHub][github]  [Mindhacks][mindhacks]
