@@ -4,4 +4,4 @@
 {{ content }}
 
 </div><!-- End Page -->
-{% include JB/comments %}
+{% if page.index == null %} {% include JB/comments %} {% endif %}
