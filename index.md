@@ -6,15 +6,18 @@ index: hide tilte at the front
 ---
 {% include JB/setup %}
 
-##Recent Articles
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}"><span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }}</a>
-      <p>{{ post.excerpt }}  <a href="{{ post.url }}">  more...</a> </p>
-    </li>
-  {% endfor %}
-</ul>
+
+
+{% for post in site.posts %}
+
+ <a class="title-link" href="{{ post.url }}"><h1 class="title">{{post.title}} </h1></a>
+
+<div class="date emphnext">{{ post.date | date: "%B %-d, %Y"}}
+</div>
+
+<p>{{ post.excerpt }}  <a href="{{ post.url }}">Read more...</a> </p>
+
+{% endfor %}
 
 
 ## Links

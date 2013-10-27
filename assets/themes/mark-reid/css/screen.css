@@ -1,4 +1,4 @@
-/* @override http://mark.reid.dev/files/css/screen.css */
+﻿/* @override http://mark.reid.dev/files/css/screen.css */
 
 /* @override 
 	http://mark.reid.dev/files/css/screen.css
@@ -29,7 +29,11 @@ body {
 
 /* Hack via Joel Spolsky to make image rescaling nicer in IE */
 img { -ms-interpolation-mode:bicubic; }
-
+img {
+    float: right;
+    margin-left: 1.5em;
+    border: 1px solid black;
+}
 /* IE6 ignores this and uses default size of 16pt */
 html>body { font-size:16px; }
 p { margin: 0 0 1.5em 0; text-align: justify; }
@@ -65,7 +69,7 @@ hr {
 sup { line-height: 1ex; }
 
 #site {
-	max-width: 46em;
+	max-width: 50em;
 	margin: 1.5em auto 3em auto;
 	line-height:1.5em;
 }
@@ -91,7 +95,7 @@ sup { line-height: 1ex; }
 #page h2:before {
 	margin-left: -3.5ex;
 	color: silver;
-	content: "§" counter(section) ". ";
+	content: "搂" counter(section) ". ";
 	counter-increment: section 2;
 }
 */
@@ -110,6 +114,13 @@ sup { line-height: 1ex; }
 	font-size: larger;
 }
 /* @end */
+
+.date {
+    line-height: 1.5em;
+    color: #999;
+    margin: 4px 0 1.5em 0;
+    font-style: italic;
+}
 
 .right { float: right; clear: left; }
 .left { float: left; clear: right; }
@@ -447,7 +458,7 @@ div.LTprovided { display: none; }
 .delicious-posts a { }
 .delicious-post a { font-weight: bold; }
 p.delicious-extended { font-size: 100%; display: inline; }
-p.delicious-extended:before { content: ' — '; }
+p.delicious-extended:before { content: ' 鈥� '; }
 /* @end */
 
 /* @group Footer */
@@ -546,4 +557,3 @@ img.maruku-png { }
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-
