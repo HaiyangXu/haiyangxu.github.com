@@ -3,6 +3,7 @@ layout: page
 title: "About Me"
 tagline: A Computer Vision Blog
 description: ""
+date: 2013/10/28
 ---
 {% include JB/setup %}
 

@@ -4,7 +4,6 @@ title: "大悟凉粉小铺"
 description: ""
 category: "随笔"
 tags: []
-date: 2011-08-12
 ---
 {% include JB/setup %}
 
