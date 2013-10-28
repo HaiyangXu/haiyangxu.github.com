@@ -12,4 +12,4 @@ I'm Haiyang Xu ,a grad student in computer vision at the Huazhong University of 
 I have got my Bachelor's Degree in computer science and technology from Wuhan University of Technology at Jun 30, 2013.
 
 
-[Me]: /images/me.jpg "This was taken when I was going to Sanya."
+[Me]: /assets/images/me.jpg "This was taken when I was going to Sanya."
