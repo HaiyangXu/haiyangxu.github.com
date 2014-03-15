@@ -25,4 +25,5 @@ published: true
 ![enter image description here][1]
 
 
+
   [1]: https://lh4.googleusercontent.com/-Uunkc158XB4/UyQAdJR781I/AAAAAAAAApI/MgAcoms9n5k/s0/cplusplus_operator+precedence.png "cplusplus_operator precedence.png"
