@@ -50,8 +50,8 @@ C++ Primer上还有一个关于指针和typedef的例子：
 
     typedef string *pstring;
     const pstring cstr;
-这个cstr是什么呢 ？ 指向常量的指针（`const string *cstr`） ？ 错！ 由上面定义的实际上是个const指针，而非指向const变量的指针。为什么呢 ？因为我们错误的把typedef当作文本替换的作用了，认为 pstring 就是`string *`的替换，所以`const pstring cstr`就是 `const string *cstr `，所以是指向常量的指针。
 
+这个cstr是什么呢 ？ 指向常量的指针（`const string *cstr`） ？ 错！ 由上面定义的实际上是个const指针，而非指向const变量的指针。为什么呢 ？因为我们错误的把typedef当作文本替换的作用了，认为 pstring 就是`string *`的替换，所以`const pstring cstr`就是 `const string *cstr `，所以是指向常量的指针。
 正确的理解应该是上面定义了一个string类型的常量指针，*typedef定义了一个string类型的指针 pstring*，所以const修饰的是指针类型，把pstring看成一个类型，就很容易理解了。而且由于const标识符和类型名称前后次序都是正确的，所以就更加让人混淆了。pstring const cstr; 等同于上面的定义。实际上上面的定义在编译器中会报错的，别忘了const变量在定义的时候要初始化！
 
 ####5.const变量的位置
