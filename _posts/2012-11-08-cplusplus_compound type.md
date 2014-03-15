@@ -15,10 +15,10 @@ C++中有一种"另类"的类型：compound type ，指针(`*`)、引用(`&`)等
  - 常量指针和 指向常量的指针
  - 数组指针和 指针数组
  - 数组指针和指针数组
-    
-        int *matrix[10]; // an array of 10 int pointer elements
-        int (*matrix)[10]; // a pointer to an array of 10 elements 
-        int (matrix*)[10]; // equaval to int [][10]
+
+    int *matrix[10]; // an array of 10 int pointer elements
+    int (*matrix)[10]; // a pointer to an array of 10 elements
+    int (matrix*)[10]; // equaval to int [][10]
 
  
     
