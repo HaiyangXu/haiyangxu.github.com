@@ -1,4 +1,4 @@
-﻿/* @override http://mark.reid.dev/files/css/screen.css */
+/* @override http://mark.reid.dev/files/css/screen.css */
 
 /* @override 
 	http://mark.reid.dev/files/css/screen.css
@@ -370,6 +370,7 @@ pre {
 	box-shadow: 1px 1px 6px #ccc;
 	-webkit-box-shadow: 1px 1px 6px #ccc;
 	-moz-box-shadow: 1px 1px 6px #ccc;
+        word-wrap:break-word
 }
 pre:hover {
 	border-right: none;
