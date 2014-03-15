@@ -10,7 +10,7 @@ index: hide tilte at the front
 
 {% for post in site.posts %}
 
- <a class="title-link" href="{{ post.url }}"><h1 class="title">{{post.title}} </h1></a>
+ <h1 class="title"> <a class="title-link" href="{{ post.url }}">{{post.title}} </a> </h1>
 
 <div class="date emphnext">{{ post.date | date: "%B %-d, %Y"}}
 </div>

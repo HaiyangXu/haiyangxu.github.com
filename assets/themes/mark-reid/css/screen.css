@@ -30,7 +30,6 @@ body {
 /* Hack via Joel Spolsky to make image rescaling nicer in IE */
 img { -ms-interpolation-mode:bicubic; }
 img {
-    float: right;
     margin-left: 1.5em;
     border: 1px solid black;
 }
@@ -44,7 +43,7 @@ a.pdf:before {
 	margin-right: 1em;
 	content: url(/files/css/icon_pdf.gif); }
 
-h1,h2,h3,h4 { 
+h1,h2,h3,h4 {
 	line-height:1em; 
 	font-size:1.5em; 
 	font-weight: normal; 
@@ -58,7 +57,16 @@ h2 {
 	margin:1.5em 0 1.5em 0;
 	font-weight:bold;
 }
-
+h1{font-size:36px}
+h2{font-size:30px}
+h3{font-size:24px}
+h4{font-size:18px}
+h5{font-size:14px}
+h6{font-size:12px}
+h1{margin:30px 0 20px}
+h2{margin:25px 0 15px}
+h3{margin:20px 0 10px}
+h4,h5,h6{margin:15px 0 10px}
 hr { 
 	border-top: 1px solid silver;
 	border-bottom: none;
