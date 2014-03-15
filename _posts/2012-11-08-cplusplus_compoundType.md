@@ -2,7 +2,7 @@
 layout: post
 title: "C++组合类型(compound type)"
 description: ""
-category: ""
+category: "C++"
 tags: ["C++"]
 published: true
 ---

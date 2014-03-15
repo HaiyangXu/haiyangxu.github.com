@@ -2,7 +2,7 @@
 layout: post
 title: "C++的const变量"
 description: ""
-category: ""
+category: "C++"
 tags: ["C++"]
 published: true
 ---

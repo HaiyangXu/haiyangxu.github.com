@@ -2,7 +2,7 @@
 layout: post
 title: "测试MathJax 和 code HighlightHtml"
 description: ""
-category: ""
+category: "C++"
 tags: []
 published: true
 ---
