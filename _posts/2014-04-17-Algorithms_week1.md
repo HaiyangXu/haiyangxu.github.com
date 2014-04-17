@@ -17,7 +17,9 @@ published: true
 学习算法的好处是不言自明了，这个Standford的老师说他教算法并不是为了让你应付面试，不过他说学过算法课程的同学反馈说这门课对求职通过面试很有帮助，哈哈。
 
 从乘法运算开始，$$5678*1234$$ 我们从小学就学会的做法就是每位相乘然后相加，
+
 ![enter image description here][2] 
+
 总共需要 小于 $$n^2$$次乘法 ,有没有更好的办法呢 ？ 算法设计者的Mantra(咒语) 就是永远不要be content ，要永远问一句 Can we do better ?
 
 [Karatsuba algorithm][3]就是一个快速计算n为数字相乘的算法，wiki了一下发现还有很多类似算法。Karatsuba algorithm的具体原理就是为了计算$$x*y $$ 若$$x=10^{n/2}a+b ,y=10^{n/2}c+d$$则 
@@ -64,8 +66,13 @@ $$6n(log_2(n)+1)=6nlog_2(n)+6n$$
 算法的渐进分析就是估计当求解问题的规模 n 逐步增大时，时间开销 T(n)的增长趋势。为简化时间和空间复杂性的度量，可以只关注于复杂性的量级，而忽略量级的系数。而从数量级大小来考虑，当 n 增大到一定值以后，T(n) 计算公式中影响最大的就是 n 的幂次最高的项，其他的常数项和低幂次项都是可以忽略的。
 
 渐进分析的结果是得到一个大 O 渐进表达式， 简写为
+
+
 $$f(x)=O(g(x))\text{ as }x\to\infty $$ 
-表示存在常数$$c$$ 使得$$f(x)<=c* g(x)\text{  as }x\to\infty $$
+
+表示存在常数$$c$$ 使得
+
+$$f(x)<=c* g(x)\text{  as }x\to\infty $$
 
  
 ##Guiding Principles of Algorithm Analysis
