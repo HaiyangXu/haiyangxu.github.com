@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "StackEdit With Github Pages"
