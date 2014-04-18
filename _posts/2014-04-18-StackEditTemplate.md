@@ -29,9 +29,9 @@ published: true
 <pre><code>&lt;%
 if (frontMatter.hasOwnProperty("_frontMatter")) 
     print(frontMatter["_frontMatter"]);
-print("{% include JB/setup %}");
 %&gt;
+&lt;%= "{% include JB/setup %}" %&gt;
 &lt;%= documentHTML %&gt;
 </code></pre>
 
-<p>其中 <code>frontMatter["_frontMatter"]</code>  是markdown里面的YAML头原样输出， <code>print("{% include JB/setup %}")</code> 是输出Jekyll配置。 输出的文件中就包括YAML头，剩下markdown的html转换。</p>
+<p>其中 <code>frontMatter["_frontMatter"]</code>  是markdown里面的YAML头原样输出， <code>&lt;%= "{% include JB/setup %}" %&gt;</code> 是输出Jekyll配置。 输出的文件中就包括YAML头，剩下markdown的html转换。</p>
