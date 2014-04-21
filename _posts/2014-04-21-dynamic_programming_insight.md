@@ -1,8 +1,8 @@
 ---
 layout: post
-title: " 动态规划"Aha"Moment "
+title: " 动态规划 Aha Moment "
 description: ""
-category: ["算法", "思考"]
+category: ["算法","思考"]
 tags: ["动态规划","算法","顿悟"]
 published: true
 ---
