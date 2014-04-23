@@ -63,6 +63,7 @@ Return true because "leetcode" can be segmented as "leet code".
             return false;
         }
     };
+
 这个时候重复求解的就是`s[0,i)`所以如果说我们先求了`s[0,i)`可不可以被分割，再求`s[0,j) (j>i)`可不可分的时候其实就可以去掉重复求解子问题了，假设用一个数组`dp[x]`表示`s[0,x)`可不可分。 那么 :
 
  1. `dp[j]=true  if s[0,j)  in the dict`
