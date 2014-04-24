@@ -2,12 +2,11 @@
 layout: post
 title: "LeetCode: Gas Station"
 description: ""
-categories:[ "算法","LeetCode"]
-tags: ["LeetCode","动态规划","Gas Station"]
+categories: ["算法","Leet Code"]
+tags: ["Gas Station","动态规划"]
 published: true
 ---
-{% include JB/setup %}
-
+{% include JB/setup %} 
 之前找别人的解体方案的时候总是习惯性的找有文字描述的，今天看到这个[Gas Station][1]的题目，文字说明到让我有点糊涂，代码加公式的描述竟然更好理解。
 
 这篇博客里面说Gas Station的问题其实是[最大子段和][2] ，只不过是一个循环的。然后就Google了一下最大子段和的求法，发现这个[最大子段和详解（N种解法汇总）][3] 里面描述了各种解法，非常好。不过其中分治发和动态规划发的文字描述虽然很详细却并不好理解，而[这篇][4] 文章里面几个公式加代码让我一下就看懂了。具体就是：
