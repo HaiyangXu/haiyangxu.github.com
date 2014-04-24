@@ -1,15 +1,12 @@
 ---
 layout: post
-title: "[LeetCode]Gas Station"
+title: "LeetCode: Gas Station"
 description: ""
-categores:[ "算法" ,"Leet Code"]
+categories:[ "算法","Leet Code"]
 tags: ["LeetCode","动态规划","Gas Station"]
 published: true
 ---
 {% include JB/setup %}
-
-
-
 
 之前找别人的解体方案的时候总是习惯性的找有文字描述的，今天看到这个[Gas Station][1]的题目，文字说明到让我有点糊涂，代码加公式的描述竟然更好理解。
 
