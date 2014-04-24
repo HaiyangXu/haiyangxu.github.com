@@ -2,7 +2,7 @@
 layout: post
 title: "LeetCode: Triangle"
 description: "动态规划 Aha moment"
-categories: ["算法","LeetCode"]
+categories: ["算法","Leet Code"]
 tags: ["动态规划","算法","顿悟"]
 published: true
 ---
