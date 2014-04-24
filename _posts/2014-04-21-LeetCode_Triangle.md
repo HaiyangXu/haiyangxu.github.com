@@ -1,8 +1,8 @@
 ---
 layout: post
-title: " 动态规划 Aha Moment "
-description: ""
-category: ["算法","思考"]
+title: "LeetCode: Triangle"
+description: "动态规划 Aha moment"
+categories: ["算法","LeetCode"]
 tags: ["动态规划","算法","顿悟"]
 published: true
 ---
