@@ -19,7 +19,7 @@ Question:
 > Find the total sum of all root-to-leaf numbers.
 > 
 > For example,
-> 
+ 
       1    
      / \   
     2   3 
