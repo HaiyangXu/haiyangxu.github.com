@@ -2,7 +2,7 @@
 layout: post
 title: " LeetCode: Word Break Ⅱ "
 description: ""
-categories: ["算法","LeetCode"]
+categories: ["算法","Leet Code"]
 tags: ["动态规划","Word Break Ⅱ","LeetCode"]
 published: true
 ---
