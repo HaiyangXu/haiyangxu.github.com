@@ -2,7 +2,7 @@
 layout: post
 title: "LeetCode: Gas Station"
 description: ""
-categories:[ "算法","Leet Code"]
+categories:[ "算法","LeetCode"]
 tags: ["LeetCode","动态规划","Gas Station"]
 published: true
 ---
