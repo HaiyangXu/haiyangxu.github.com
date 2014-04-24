@@ -2,7 +2,7 @@
 layout: post
 title: "LeetCode: Sum Root to Leaf Numbers"
 description: ""
-categores: ["算法","Leet Code"]
+categories: ["算法","Leet Code"]
 tags: ["Binary Tree","Sum Root to Leaf Numbers","Leet Code"]
 published: true
 ---
