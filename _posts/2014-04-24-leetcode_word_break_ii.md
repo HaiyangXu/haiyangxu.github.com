@@ -99,7 +99,7 @@ published: true
 但是后来发现，在LeetCode上会超时的就是那些本来就不可以被分割的的输入，就在`if(!dp[0]) return result;`这里起作用，如果不可分就直接返回了。后面递归判断`if(dp[i]&&dict.count(s.substr(pos,i-pos)))`去掉对`dp[i]`的判断也可以被Accepted ，具体的运行时间在LeetCode上不好比较，但是理论上来说加上`dp[i]`的判断，应该减少了很多递归次数。还看到一个，用[二维表的动态规划][5]，记录每个可分割位置的方法，感觉理论上比较快，但是测试运行了一下速度也没有特别快（也要36ms，和上面的一样），可能是应为LeetCode 的原因或者是数据集不够大.
 
 
-  [1]: /2014-04-23-leetcode_word_break
+  [1]: ./2014-04-23-leetcode_word_break
   [2]: http://oj.leetcode.com/problems/word-break-ii/
   [3]: http://blog.csdn.net/cs_guoxiaozhu/article/details/14104789
   [4]: /2014-04-23-leetcode_word_break
