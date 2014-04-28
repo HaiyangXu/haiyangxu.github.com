@@ -12,7 +12,7 @@ markdown: kramdown
 
 encoding : utf-8
 
-
+pygments: true
 title : Haiyang Xu
 tagline: Grow step by step !
 author :
