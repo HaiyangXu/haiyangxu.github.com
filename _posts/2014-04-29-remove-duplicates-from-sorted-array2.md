@@ -7,6 +7,7 @@ tags: ["LeetCode","Remove Duplicates"]
 published: true
 ---
 {% include JB/setup %}
+
 [Remove Duplicates from Sorted Array II ][1]
 [Question]
 
@@ -31,6 +32,7 @@ published: true
     |   |   |   |   |   |   |   |
                   ↑
                  cur
+
 代码：
 
 
