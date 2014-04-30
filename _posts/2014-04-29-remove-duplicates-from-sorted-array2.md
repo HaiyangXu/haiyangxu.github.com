@@ -2,7 +2,7 @@
 layout: post
 title: "LeetCode: Remove Duplicates from Sorted Array II"
 description: ""
-categories:["算法","Leet Code"]
+categories: ["算法","Leet Code"]
 tags: ["LeetCode","Remove Duplicates"]
 published: true
 ---

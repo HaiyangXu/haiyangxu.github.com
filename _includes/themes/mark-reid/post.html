@@ -1,18 +1,21 @@
 <div id="page">
 	
   <h1 class="emphnext">{{ page.title }}</h1>
-  <ul class="tag_box inline">
-  {% assign tags_list = page.tags %}
-  {% include JB/tags_list %}
-  </ul>
-
+  <hr class="title_line">
   {{ content }}
 
+  <hr class="tag_line">
+   <ul class="tag_box inline">
+  {% assign tags_list = page.tags %}
+  {% include JB/tags_list %}
+  </ul> 
   <address class="signature">
     <a class="author" href="{{ HOME_PATH }}">{{ site.author.name }}</a> 
     <span class="date">{{ page.date | date_to_long_string }}</span>
     <span class="location">{{ page.location }}</span>
   </address>
+ 
+
   
   <div class="prev-next">
   {% if page.next %}
