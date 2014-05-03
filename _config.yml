@@ -3,7 +3,6 @@
 permalink: /posts/:year/:year-:month-:day-:title.html 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-pygments: true
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -21,7 +20,7 @@ author :
   github : HaiyangXu
   twitter : username
   feedburner : feedname
-excerpt_separator: <!--more--> 
+excerpt_separator: "\n\n"
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls
