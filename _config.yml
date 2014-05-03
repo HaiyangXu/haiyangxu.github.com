@@ -20,7 +20,7 @@ author :
   github : HaiyangXu
   twitter : username
   feedburner : feedname
-excerpt_separator: "\n\n"
+excerpt_separator: "\n\n\n"
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls
