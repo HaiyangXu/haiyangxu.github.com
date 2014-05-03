@@ -1,7 +1,7 @@
 <!-- Duoshuo Comment BEGIN -->
 	  <div class="ds-thread" 
 	  data-title="{% if page.date %}{{page.date|date_to_long_string}}{% endif %}-{% if page.title %}{{page.title}}{% endif %}"
-	  data-thread-key="{% if page.date %}{{page.date|date_to_long_string}}{% endif %}-{% if page.title %}{{page.title}}{% endif %}"></div>
+	  data-thread-key="{% if page.path %}{{page.path}}{% endif %}"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"{{site.JB.comments.duoshuo.short_name}}"};
 	(function() {
