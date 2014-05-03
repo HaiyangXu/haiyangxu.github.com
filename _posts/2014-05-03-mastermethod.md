@@ -17,6 +17,7 @@ published: true
  2. 递归树解法： 画出递归式的递归调用树，计算每层子问题个数、子问题规模，对每层时间消耗求出总和，根据递归关系求出树高，然后对所有层进行求和得到递归式的总体规模。
  3. 主方法：对符合特定递归条件的递归式使用解析解法，递归式需为$$ T(n)=aT(n/b)+f(n) $$
 
+
 本文主要对主方法进行直观的证明，以便理解主方法中三种情况的具体表现；对主方法的证明，可以更好的理解主方法并且在不需要死记硬背的前提下就记住了主方法的结论。 
 
 #2.主方法
@@ -75,8 +76,8 @@ $$L(j)\le a^j\cdot c\cdot(\frac{n}{b^j})^d=cn^d\cdot(\frac{a}{b^d})^j$$
 
 定义：
 
-> a=子问题的增长系数 rate of subproblem proliferation (RSP) 
->$$b^d$$=子问题规模缩减系数 rate of work shrinkage (RWS)
+ - a= 子问题的增长系数 rate of subproblem proliferation (RSP) 
+ - $$b^d$$= 子问题规模缩减系数 rate of work shrinkage (RWS)
 
 这里可以直观的发现，
 
