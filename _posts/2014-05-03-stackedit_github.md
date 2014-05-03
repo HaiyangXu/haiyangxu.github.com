@@ -35,6 +35,7 @@ Jekyll的配置文件里面可以指定markdown的解析器，目前发现只有
 ##StackEdit写作
 
 StackEdit是目前我见过最好的markdown编辑器了，所见即所得而且支持直接发表到GitHub。但是，它使用的markdown解析是基于JavaScript的Pagedown和kramdown语法并不完全一致，所以在StackEdit中看到的效果和发表到GitHub Pages上由kramdown解析的结果并不太一样，有时候还会有很大差别。
+
 主要需要注意的就是，StackEdit中例如标题后面不空格也能很好的处理，但是kramdown并不一定，解决办法就是使用StackEdit的时候尽可能的清晰的使用空行来间隔各种元素。
 
 ##写作流程
