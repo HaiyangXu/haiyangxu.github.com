@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "让StackEdit 和kramdown的MathJax兼容"
