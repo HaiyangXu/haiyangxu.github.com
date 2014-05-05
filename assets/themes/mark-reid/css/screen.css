@@ -365,6 +365,12 @@ p.excerpt { margin: 0; }
 /* @end */
 
 /* @group Code */
+blockquote pre{
+	display: inline-block;
+	background: #DADDDD;
+	position:relative;
+	left:25%;
+}
 pre {
 	margin: 1em 0 1.5em 2em;
 	font-size: 0.75em; /* Hack to make code look same size as body font */  
