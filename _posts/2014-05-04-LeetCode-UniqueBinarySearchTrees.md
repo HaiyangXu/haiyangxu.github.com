@@ -12,7 +12,8 @@ published: true
 
 ###[Question]
 
-http://oj.leetcode.com/problems/unique-binary-search-trees/
+[http://oj.leetcode.com/problems/unique-binary-search-trees/][1]
+
 > Given n, how many structurally unique BST's (binary search trees) that
 > store values 1...n?
 > 
@@ -57,7 +58,7 @@ $$f(n)=f(0)*f(n-1)+f(1)*f(n-2)+...+f(n-2)*f(1)+f(n-1)*f(0)$$
 
 ###[Question]
 
-http://oj.leetcode.com/problems/unique-binary-search-trees-ii/
+[http://oj.leetcode.com/problems/unique-binary-search-trees-ii/][2]
 
 > Given n, generate all structurally unique BST's (binary search trees)
 > that store values 1...n.
@@ -117,3 +118,7 @@ http://oj.leetcode.com/problems/unique-binary-search-trees-ii/
         }
         
     };
+
+
+  [1]: http://oj.leetcode.com/problems/unique-binary-search-trees/
+  [2]: http://oj.leetcode.com/problems/unique-binary-search-trees-ii/
