@@ -9,11 +9,13 @@ published: true
 {% include JB/setup %} 
 
 LeetCode [Word Break][1] 题目如下：
-> Given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
->For example, given
-s = "leetcode",
-dict = ["leet", "code"].
-Return true because "leetcode" can be segmented as "leet code".
+
+>  Given a string s and a dictionary of words dict, determine if s can
+> be segmented into a space-separated sequence of one or more dictionary
+> words.
+> 
+> For example, given s = "leetcode", dict = ["leet", "code"]. Return
+> true because "leetcode" can be segmented as "leet code".
 
 暴力的解法就是对s中每一个可能组合查找一遍,先找前缀在不在词典，如果再递归后面的部分(Time Limit Exceeded)：
     
