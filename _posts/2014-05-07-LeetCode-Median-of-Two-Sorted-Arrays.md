@@ -28,16 +28,15 @@ There are two sorted arrays A and B of size m and n respectively. Find the media
 
 使用两个指示器pa、pb分别指向两个数组， 且使 pa+pb=k，直观上感觉如果让这k个元素为两个数组中的前k个元素，那么pa 、pb所指的其中一个就应该是Kth.
 
-```
-           pa
-           ↓
-A    |    |   |   |   |   |   |   |
-    
-               pb
+ 
+               pa
                ↓
-B    |    |   |   |   |   |   |   |   |   |
-```
-
+    A    |    |   |   |   |   |   |   |
+        
+                   pb
+                   ↓
+    B    |    |   |   |   |   |   |   |   |   |
+ 
 
 最坏情况下m 、n都大于 k/2 ，让pa=k/2  pb=k/2
 则每次判断A[k/2-1] B[k/2-1]的大小，舍弃一半的查找区间，并减小k ，当k=1时返回区间头的最小值。
