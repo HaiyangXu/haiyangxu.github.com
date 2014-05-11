@@ -130,9 +130,9 @@ HTTP是在客户端和服务器端进行超文本传输的请求/响应协议，
 
 [HTTP 协议简介][2]  
 
-[HTTP协议详解][3][^2]
+[HTTP协议详解][3]
 
-[How the web works: HTTP and CGI explained][4]
+[How the web works: HTTP and CGI explained][4][^2]
 
   
   
