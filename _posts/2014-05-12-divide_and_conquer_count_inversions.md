@@ -23,11 +23,5 @@ published: true
 在编码的时候发现这个之前写过的小算法竟然还会写错，出现的问题是递归的结束条件没有判断好，造成了死循环！在归并的时候，如果序列数目小于等于1的时候都是要直接返回，但是因为下面的程序中为了节省数组构造时间，递归传递的是数组index，判断的时候就没写好了。
 
 **[Code]**
-<script src="https://gist.github.com/HaiyangXu/6561feeada679b12d225.js"></script>
-
-
-
-
-
 
 <script src="https://gist.github.com/HaiyangXu/6561feeada679b12d225.js"></script>
