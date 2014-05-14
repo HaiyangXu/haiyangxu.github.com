@@ -8,7 +8,7 @@ published: true
 ---
 {% include JB/setup %} 
 
-今天在给Ubuntu安装PCL库的时候更新硬是出错，根据PCL官网的说明添加了deb源，并且updage的时候出现"Hash Sum mismatch" 即Hash校验和不符，因为没有更新成功，这个时候使用`apt-get install libpcl-all` 的话就找不到软件包。最后我用Goagent代理更新源，就解决这个mismatch问题了，然后就顺利安装好了。
+今天在给Ubuntu安装PCL库的时候更新硬是出错，根据PCL官网的说明添加了deb源，在`apt-get update`的时候出现"Hash Sum mismatch" 即Hash校验和不符.因为没有更新成功，这个时候使用`apt-get install libpcl-all` 的话就找不到软件包。最后我用Goagent代理更新源，就解决这个mismatch问题了，然后就顺利安装好了。
 
 为什么会出现这个问题呢？万能的Google告诉了我答案：
 
