@@ -47,7 +47,7 @@
 		{
 		current.attr("id", "title" + i);
 		$("#toc").append("<a id='link" + i + "' href='#title" +
-        i + "' title='" + current.attr("tagName") + "'>" + 
+        i + "' title='" + current.prop("tagName") + "'>" + 
         current.html() + "</a>");
 		}
 		});
