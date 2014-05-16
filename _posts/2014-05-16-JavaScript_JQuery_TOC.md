@@ -9,7 +9,8 @@ published: true
 {% include JB/setup %} 
 
 昨天写那篇关于编译连接的文章的时候有一个问题纠结了我很久，就是想用Google Spredsheet托管文章中的表格，直接用iframe嵌入进去，想让frame自适应大小，网上搜了一点资料死活没搞定，然后就一下午把w3cschool上关于JavaScript JQuery的简介看了个遍，想找个解决办法。结果最后结果发现这个涉及到跨域的信息传递，需要用代理frame可以解决这个办法，还有就是使用HTML5的一个postmessage的方法，可是我没办法修改Google提供的页面啊，所以最后选择把表格复制到google绘图，以图片的形式嵌入到文章中。
-看了一下午的JavaScript简介、JQuery简介基本上就了解了个大概，可以动手了。一直想给文章添加个目录，在StackEdit中直接用[TOC]标签就可以自动生成了，但是发表到GitHub上用kramdown处理，他不支持这个标签，kramdown实现目录的方式要在写作的时候添加太多标签了，不简洁。求助了一下Google，发现可以直接[用JQuery实现目录][1]。
+
+看了一下午的JavaScript简介、JQuery简介基本上就了解了个大概，就可以动手了。一直想给文章添加个目录，在StackEdit中直接用[TOC]标签就可以自动生成了，但是发表到GitHub上用kramdown处理，他不支持这个标签，kramdown实现目录的方式要在写作的时候添加太多标签了，不简洁。求助了一下Google，发现可以直接[用JQuery实现目录][1]。
 
 然后根据我的博客改动了一下，基本就成功了。
 
@@ -46,12 +47,16 @@ published: true
     #toc {width:250px; position:fixed; float:left; left:20px ;top:50px;}
     #toc a { display:block; color: #6C7479;}
     
-这样一个目录就会生成了。下面几个标题演示一下：
+这样一个目录就会生成了。下面来几个标题演示一下：
 
 #一级目录演示
+
 ##二级目录演示
+
 ##再来一个二级目录
+
 ###三级目录演示
+
 ###再来一个三级目录
     
     
