@@ -19,6 +19,11 @@
 /* @group Reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,td,abbr { margin:0; padding:0;}
 /* @end */
+/*TOC */
+#toc {position:fixed; float:left; left:20px ;top:10px;}
+#toc a { display:block; color: #6C7479;}
+
+
 ul,ol{
 	margin-left: 1.5em;
 	margin-top: 1.5em;

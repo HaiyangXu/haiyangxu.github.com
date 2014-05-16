@@ -33,13 +33,35 @@
 	});
    </script>
    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
+   
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"> </script>
+  
+   <script type="text/javascript" >
+	$(document).ready(function()
+	{
+		$("#toc").append('<p>In this article:</p>');
+		$("h1, h2, h3,h4").each(
+		function(i) {
+		var current = $(this);
+		if(!current.hasClass('emphnext'))
+		{
+		current.attr("id", "title" + i);
+		$("#toc").append("<a id='link" + i + "' href='#title" +
+        i + "' title='" + current.attr("tagName") + "'>" + 
+        current.html() + "</a>");
+		}
+		});
+	})
+	
+	
+  </script>
+  
 </head>
 <body id="{{ page.section }}">
 <div id="site">
   
   <div id="header">
-    <h1>
+    <h1 class="emphnext">
     	<a href="{{ HOME_PATH }}" title="{{ site.title }}">{{ site.title }}</a>
     	<span class="byline">&larr; <a href="{{ HOME_PATH }}">{{ site.tagline }}</a></span>
     </h1>
