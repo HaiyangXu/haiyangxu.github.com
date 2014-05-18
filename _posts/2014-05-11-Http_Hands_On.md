@@ -93,7 +93,7 @@ HTTP是在客户端和服务器端进行超文本传输的请求/响应协议，
 
 在Leetcode上看到的那个502就是LeetCode使用的nginx代理返回的，nginx是啥 ？后面慢慢看。
 
-下面是一个python下的简单HTTP请求演示函数：
+下面是一个python下的简单HTTP请求演示函数（要在python 2下面用,2.7是没问题的，3.x就不行）：
 
     # Simple Python function that issues an HTTP request
     
