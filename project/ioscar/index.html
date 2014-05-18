@@ -16,19 +16,20 @@ function change()
 var iphone=document.getElementById("home");
 if( flag )
 	{
-	iphone.background="menu.png";
+	iphone.src="menu.png";
 	flag=false;
 	}
     
 else
 	{
 	flag=true;
-	iphone.background="home.png";
+	iphone.src="home.png";
 	}
 }
 </script>
 
 </head>
-<body id="home" background="home.png" onclick="change()">
+<body>
+<img id="home" width="320" height="548" src="home.png"  onclick="change()">
 </body>
 </html>
