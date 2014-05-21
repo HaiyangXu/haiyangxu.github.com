@@ -44,6 +44,8 @@ Bootloader是被BIOS从磁盘的第一个扇区([boot sector][2])加载到内存
 
 ###Wubi干了啥？
 
+下面是使用Ubuntu13.10 用wubi在windows 7下面进行安装的。
+
  1. wubi安装的时候在宿主系统windows7中建立了一个虚拟磁盘文件root.disk，ubuntu系统全部在这个虚拟的磁盘文件中。
 
  2. wubi同时也给win7添加了一个启动项，即在BOOTMGR中添加了一个类型为BOOTSECTOR类型的启动项。
@@ -89,10 +91,39 @@ Bootloader是被BIOS从磁盘的第一个扇区([boot sector][2])加载到内存
 
 这部分还参考了[从一个bug看Linux启动原理][6] 还有[Ubuntu with Wubi: WUBILDR, WUBILDR.MBR and GRLDR][7]
 
-.
- 
+###迷惑的地方
 
+wubildr.mbr中的程序是从磁盘第一块分区开始以此往后在磁盘根目录查找wubildr的，
+我只要保证在磁盘根目录有一个wubildr就可以成功进入GRUB了。
+问题是：
+我的磁盘有 C D E F四个分区，开始的时候我把ubuntu安装在F:/ubnutu/ ,启动进入ubuntu后 我把把F盘的/ubuntu/复制到E盘了，在现在运行中的ubuntu桌面添加了一个文件"This is origin"作为区分标志，然后把wubildr从C盘移到E盘。系统中的结构如下：
 
+    D:  wubildr
+    E: /ubuntu/... (This is the copy)
+    F: /ubuntu/... (This is the origin)
+    
+重启之后我还是进入了This is the origin. 进入E盘Ubuntu的办法只有一个：进入GRUB后编辑启动目录，指定E盘的root.disk
+下面是在GRUB中启动条目的代码：
+
+    gfxmode $linux_gfx_mode
+	insmod gzio
+	insmod ntfs
+	set root='hd0,msdos5' #设定给GRUB用的，找/ubuntu/disks/root.disk
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root --hint-bios=hd0,msdos5 --hint-efi=hd0,msdos5 --hint-baremetal=ahci0,msdos5  0E24BF3A24BF241D
+	else
+	  search --no-floppy --fs-uuid --set=root 0E24BF3A24BF241D
+	fi
+	loopback loop0 /ubuntu/disks/root.disk #根据上面找到的磁盘挂载/ubuntu/disks/root.disk 
+	set root=(loop0) #设定给linux用的，从root.disk中找内核
+	linux	/boot/vmlinuz-3.11.0-20-generic root=UUID=0E24BF3A24BF241D loop=/ubuntu/disks/root.disk ro rootflags=sync  quiet splash $vt_handoff
+	initrd	/boot/initrd.img-3.11.0-20-generic
+
+注意上面我给的注释，**第一个设定root是给GRUB用来找/ubuntu/disks/root.disk，用loopback挂载用的；第二个设定root=(loop0)是给linux启动用的，在挂载的loop0中找内核。**
+
+要把其中**对应的磁盘(hd0,msdos5)和磁盘UUID(0E24BF3A24BF241D)改为和E盘对应**，GRUB才能正确找到E盘的Ubuntu，并启动Ubuntu. 具体命令参考[GNU GRUB Manual 2.00][8]
+
+进入E盘的ubuntu之后使用update-grub可以更新本系统的/boot/grub/grub.cfg。但是问题是重启之后GRUB还是默认就从F盘的Ubuntu启动了。wubildr是按什么顺序搜寻/ubuntu/disks/root.disk的呢 ？难道在安装的时候硬编码了吗？可是如果我把F盘的/ubuntu/文件夹改名或者删除后，就有自动的找到E盘的/ubuntu了。这个地方有点迷惑。
 
   [^1]: 大概流程，这个网址也有描述 http://computer.howstuffworks.com/pc3.htm
 
@@ -104,3 +135,4 @@ Bootloader是被BIOS从磁盘的第一个扇区([boot sector][2])加载到内存
   [5]: http://en.wikipedia.org/wiki/GNU_GRUB
   [6]: http://blog.tomsheep.net/2011/07/08/linux-boot/
   [7]: http://ubuntu-with-wubi.blogspot.com/2011/01/wubildr-wubildrmbr-and-grldr.html
+  [8]: http://www.gnu.org/software/grub/manual/grub.html
