@@ -125,6 +125,9 @@ wubildr.mbr中的程序是从磁盘第一块分区开始以此往后在磁盘根
 
 进入E盘的ubuntu之后使用update-grub可以更新本系统的/boot/grub/grub.cfg。但是问题是重启之后GRUB还是默认就从F盘的Ubuntu启动了。wubildr是按什么顺序搜寻/ubuntu/disks/root.disk的呢 ？难道在安装的时候硬编码了吗？可是如果我把F盘的/ubuntu/文件夹改名或者删除后，就有自动的找到E盘的/ubuntu了。这个地方有点迷惑。
 
+又找到了一个关于GRUB4DOS的配置文档，通过grubinst可以[更改相关的参数][9]，这里可能是wubi在安装时设定了默认查找盘。
+参考[Grub4dos Guide][10]
+
   [^1]: 大概流程，这个网址也有描述 http://computer.howstuffworks.com/pc3.htm
 
 
@@ -136,3 +139,5 @@ wubildr.mbr中的程序是从磁盘第一块分区开始以此往后在磁盘根
   [6]: http://blog.tomsheep.net/2011/07/08/linux-boot/
   [7]: http://ubuntu-with-wubi.blogspot.com/2011/01/wubildr-wubildrmbr-and-grldr.html
   [8]: http://www.gnu.org/software/grub/manual/grub.html
+  [9]: http://diddy.boot-land.net/grub4dos/files/grldrmbr.htm
+  [10]: http://diddy.boot-land.net/grub4dos/Grub4dos.htm
