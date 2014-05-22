@@ -98,6 +98,11 @@ http://stackoverflow.com/questions/3231607/stack-segment-in-the-mikeos-bootloade
 http://superuser.com/questions/514003/how-do-you-write-a-bootloader-to-the-mbr
  
 
+##总结
+
+本文给出了一个mini OS(bootloader)的实现，对计算机启动的流程进行了简要介绍，对mini OS的代码进行了原理分析，然后把汇编代码编译成二进制文件写入U盘的首512字节，并且让计算机启动并执行了这个mini OS，虽然代码很少，但我们已经接管了计算机。在这个过程中，对计算机系统的执行，内存中栈的分配等基础知识有了实际体会和认识。
+
+在这个基础上还可以增加功能，例如增加对文件系统的支持，再load一个文件进行执行。然后后面的内容就可以使用例如c等高级语言来写了，这个mini OS是一个很好的起点。
 
 
   [1]: http://mikeos.berlios.de/write-your-own-os.html
