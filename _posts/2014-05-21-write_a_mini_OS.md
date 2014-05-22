@@ -21,8 +21,8 @@ published: true
  - BIOS从第一个找到的可启动盘上读取512 Byte的bootsector ，并开始执行
  - 这个512Byte的程序开始load操作系统或者一个更复杂的bootloader
 
-这里就是之写了这个512Byte的程序，虽然只有512Byte，但它已经从BIOS接管了计算机了，所以可以说是一个超级mini的OS了。
-关于汇编的知识就不赘述了。
+这里就是只写了这个512Byte的程序，虽然只有512Byte，但它已经从BIOS接管了计算机了，所以可以说是一个超级mini的OS了。
+关于汇编的知识就不赘述了。后面是要在linux下面用nasm进行汇编的，所以需要一个linux系统。
 
 ##Mini OS
 
@@ -67,18 +67,37 @@ published: true
 
 http://stackoverflow.com/questions/3231607/stack-segment-in-the-mikeos-bootloader
 
-http://www.cnblogs.com/awpatp/archive/2010/07/07/1772725.html
 
 ##从Mini OS启动
 
+下面来说一下怎么启动我们这个mini OS ,首先得把这个汇编程序汇编成二进制文件：
+
+    nasm -f bin -o os.bin os.asm
 
 
+这样，就把os.asm汇编成纯二进制的机器码了，在os.bin中，查看一下os.bin的属性：刚好512Byte.
+
+现在，我们的mini操作系统已经是二进制的os.bin了，怎么让计算机启动它呢？我没有按前面提到的文章中使用一个虚拟机，然后写一个ios镜像等等。
+
+我想，既然BIOS是从磁盘的前512Byte读取bootloader，那我直接把这个os.bin写入存储器的前512Byte不就好了吗？这里有点小危险，请小心操作。
+
+准备一个USB DISK,里面的内容自行备份，因为后面可能会让它上面的资料全部丢失。把U盘插入电脑，我这里使用的是Ubutu 13.10 。然后找到这个设备在我的计算机上，U盘是`/dev/sdb`，我怎么知道的？我插拔了几次U盘发现sdb一会儿有一会儿没。。。 而且linux上，设备命名是有规定的，不过我是个新手，插拔几次让我确定我没弄错。
+请注意了，如果你不小心弄错了目标，你计算机的整个硬盘可能被你给写了。
+
+使用如下的命令：
+
+    dd if=os.bin  of=/dev/sdb
+ 
+ 这样，就把os.bin写入到sdb（即插入的U盘）前512 byte的位置了。
+ 
+ 开机重启电脑，选择从U盘启动，Ok了！
+ 
+ 
+ 本部的参考：
 
 http://superuser.com/questions/514003/how-do-you-write-a-bootloader-to-the-mbr
  
 
-
-> Written with [StackEdit](https://stackedit.io/).
 
 
   [1]: http://mikeos.berlios.de/write-your-own-os.html
