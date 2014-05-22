@@ -8,7 +8,7 @@ index: hide tilte at the front
 
 
 
-{% for post in site.posts %}
+{% for post in site.posts limit:5 %}
 
  <h1 class="title"> <a class="title-link" href="{{ post.url }}">{{post.title}} </a> </h1>
 
