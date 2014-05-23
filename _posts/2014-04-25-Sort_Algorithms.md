@@ -406,9 +406,12 @@ $$T(n)=\Phi(n)+\sum_{i=0}^{n-1}O(n_i^2)$$
 
 根据算法导论上的推导，渐进时间复杂度为$$\Phi(n)$$ 。容易看出，桶排序中使用链表的插入排序若是稳定的，桶排序也就是稳定的。
 
+一个排序算法在线比较的网站 [Sorting Algorithm Animations][1] 
+
 参考：
 《算法导论》
-[排序稳定性][1]
+[排序稳定性][2]
 
 
-  [1]: http://blog.csdn.net/hkx1n/article/details/3922249
+  [1]: http://www.sorting-algorithms.com/
+  [2]: http://blog.csdn.net/hkx1n/article/details/3922249
