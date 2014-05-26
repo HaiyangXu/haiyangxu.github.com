@@ -56,8 +56,18 @@ published: true
 
 然后就好了。。。
 
+后面一重启发现网卡又不能用了，原来是驱动开机没加载，可我在加载的时候又是could not insert 'mt7601Usta': Device or resource busy，因为rt5370sta开机被加载了，所以把mt7601Usta加入到开机加载，把rt5370sta从卡机加载移除：
+
+ /lib/modules/3.13.0-24-generic/kernel/drivers/net/wireless/rt5370sta.ko
+
+
+最后发现，用这个驱动连上网系统**直接挂掉**！ 
+
+最后进TTY，把这个驱动make uninstall才好 悲催。。。 还是用老网卡吧。
+
 参考：
 
 http://blog.lytsing.org/archives/954.html       
 http://blog.csdn.net/michaelbaker/article/details/23597741          
 http://blog.163.com/thinki_cao/blog/static/83944875201310154248858/         
+http://blog.163.com/thinki_cao/blog/static/8394487520134514629561
