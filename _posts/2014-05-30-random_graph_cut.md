@@ -41,5 +41,8 @@ Karger's Random Contraction Algorithm主要思想就是随机选择一条边，�
  - 删除操作是否要优化？使用vector进行删除的时候，就是把后面的向前移动了，没有进行内存分配
  - 在这种数据存储下还没有想到更好的优化方法，要进一步优化应该要使用其他的数据存储方式。
 
+随机性：
+    使用rand得到的随机一点也不随机，后面研究一下随机数生成问题。
+
   [1]: http://en.wikipedia.org/wiki/Karger%27s_algorithm
   [2]: https://gist.github.com/HaiyangXu/93df14ae616adc764ee6
