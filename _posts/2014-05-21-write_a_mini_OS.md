@@ -92,7 +92,7 @@ http://stackoverflow.com/questions/3231607/stack-segment-in-the-mikeos-bootloade
  
  开机重启电脑，选择从U盘启动，Ok了！
  
- ##在windows7下启动MiNi OS
+##在windows7下启动MiNi OS
  
  通过windows的bootmanager可以直接启动这个os.bin ,就是给bootmanger添加一个类型为bootsector的启动项。
  
