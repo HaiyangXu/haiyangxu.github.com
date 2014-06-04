@@ -92,6 +92,19 @@ http://stackoverflow.com/questions/3231607/stack-segment-in-the-mikeos-bootloade
  
  开机重启电脑，选择从U盘启动，Ok了！
  
+ ##在windows7下启动MiNi OS
+ 
+ 通过windows的bootmanager可以直接启动这个os.bin ,就是给bootmanger添加一个类型为bootsector的启动项。
+ 
+ 
+    bcdedit /create /d "My Mini OS" /application bootsector 
+    #此时系统会自动生成一个{id} 下面在使用的时候要用这个值
+    
+    bcdedit /set {id} device partition=D:  # D:为os.bin所在的盘符
+    bcdedit /set {id} path \os.bin #这个是boot sector文件的路径）
+    bcdedit /displayorder {id} /addlast
+
+这样，windows启动项就有了一个My Mini OS的启动项了，从这里启动就进入到了MiNi OS.
  
  本部的参考：
 
