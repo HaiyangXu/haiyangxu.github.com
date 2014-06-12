@@ -269,7 +269,8 @@ $$
                 \right )
             }_\text{2D Shear}
         }^\text{Intrinsic Matrix}
-        \times
+        \\&
+        \times \qquad
         \overbrace{
         \underbrace{
              \left( \begin{array}{c | c} 
