@@ -15,12 +15,16 @@ published: true
 摄像机矩阵可以表示为如下形式：
 
 
-$$ \begin{displaymath} P = [M  | -MC]  \end{displaymath}$$
+$$ 
+\begin{displaymath} P = [M  | -MC]  \end{displaymath}
+$$
 
 
 其中，$$C$$为摄像机在世界坐标系中的位置，求出摄像机的位置$$C$$只需要用$$-M^{-1}$$乘以摄像机矩阵最后一列。对摄像机矩阵进一步分解可得：
 
-$$ \begin{displaymath} P = K [R | -RC ]=K [R | T ] \end{displaymath} $$
+$$ 
+\begin{displaymath} P = K [R | -RC ]=K [R | T ] \end{displaymath}
+$$
 
 矩阵$$R$$是rotation矩阵，因此是正交的；$$K$$是上三角矩阵. 对P的前三列进行RQ分解就可得到$$KR$$ .一般的矩阵库里面都只有QR分解算法，所以可以使用QR分解替代。具体解释见[这里][1]，Richard Hartley and Andrew Zisserman's "Multiple View Geometry in Computer Vision"给的[code][2],其中`vgg_rq()`就是分解$$KR$$. RQ分解不为一，所以可以取使$$K$$的对角线元素都为正的分解，可以通过改变矩阵对应列/行的符号得到。
 
@@ -85,7 +89,9 @@ $$
 
 这样做可以允许我们把矩阵分解为一个旋转矩阵跟着一个平移矩阵。这个矩阵描述了如何把点从世界坐标系转换到摄像机坐标系，平移矩阵$$T$$描述了在摄像机坐标系下，空间原点的位置；旋转矩阵$$R$$描述了世界坐标系的坐标轴相对摄像机坐标系的的方向。
 
-如果以世界坐标系为中心，知道了摄像机的Pose，$$\begin{displaymath}[R_c|C]\end{displaymath}$$即空间位置$$C$$和相对世界坐标系坐标轴的旋转$$R_c$$，怎么得到外参矩阵呢？给摄像机的pose矩阵添加(0,0,0,1)让它成为方阵，对pose矩阵求逆就可以得到外参矩阵。
+如果以世界坐标系为中心，知道了摄像机的Pose，
+$$\begin{displaymath}[R_c|C]\end{displaymath}$$
+即空间位置$$C$$和相对世界坐标系坐标轴的旋转$$R_c$$，怎么得到外参矩阵呢？给摄像机的pose矩阵添加(0,0,0,1)让它成为方阵，对pose矩阵求逆就可以得到外参矩阵。
 
 $$
 \begin{align}
