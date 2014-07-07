@@ -8,7 +8,6 @@ published: true
 ---
 {% include JB/setup %}
 
-
 将n分解质因数的高效代码
 
     for(int i=2;i<=sqrt(n);i++)  
