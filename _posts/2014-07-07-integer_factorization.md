@@ -41,4 +41,22 @@ i从2开始到sqrt(n)的每一个i由n试除，如果能整除就再判断i是�
     }
     cout<< n;  
 
+再改进，因为质数中除2外都是奇数，所以i可以一次前进两步：
+
+    while(n%2==0)
+    {
+        cout<<2;
+        n/=2;
+    }
+    for(int i=3,sqr=sqrt(n);i<=sqr;i+=2)  
+    {
+        if(n%i==0&&(n/=i))  
+            {
+                sqr=sqrt(n);
+                cout<< i;
+                i-=2;
+            }
+    }
+    cout<< n;  
+
   [1]: http://blog.csdn.net/xinghongduo/article/details/5809607
