@@ -4,7 +4,7 @@ title: "First Time Hackathon !"
 description: ""
 categories: ["活动",""]
 tags: ["Hackathon","大众点评2014校园极客挑战赛"]
-published: true
+published: false
 ---
 {% include JB/setup %}
 7月12-14到上海参加了大众点评2014校园极客挑战赛，首先得感谢一下大众点评公司组织了这次Hackathon，这是我第一次参加这种活动，也是第一次了解到Hackathon.
