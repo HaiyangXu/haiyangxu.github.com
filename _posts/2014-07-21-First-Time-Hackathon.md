@@ -17,8 +17,11 @@ published: false
 虽然这次Hackathon我们没有获奖，但是收获非常多。
 
 Teamwork
+
 self-motivated
+
 MVP(Minimum Viable Product)
+
 Done Is Better Than Perfect
 
 

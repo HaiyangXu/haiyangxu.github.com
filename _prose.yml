@@ -1,0 +1,9 @@
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://haiyangxu.github.io/'
+  media: 'posts/images'
+  ignore:
+    - index.html
+    - _config.yml
+    - /_layouts
+    - /_includes
