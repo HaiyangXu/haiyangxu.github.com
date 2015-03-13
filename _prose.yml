@@ -1,7 +1,7 @@
 prose:
   rooturl: '_posts'
   siteurl: 'http://haiyangxu.github.io/'
-  media: 'media'
+  media: 'posts/images'
   ignore:
     - index.html
     - _config.yml
