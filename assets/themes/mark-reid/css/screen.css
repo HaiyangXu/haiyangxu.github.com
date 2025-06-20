@@ -255,8 +255,8 @@ ul.compact li a {
 	line-height: 1.6em;
 	display: block;
 	margin: 0;
-	width: 50%;
 	text-align: right;
+	white-space: nowrap;
 }
 #header ul li { display: inline; }
 #header ul li a {
@@ -586,3 +586,130 @@ img.maruku-png { }
 	border:1px solid #4C964D;
 	color:#FFF;
 }
+
+/* @group Responsive Design */
+
+/* Mobile menu toggle button - hidden by default */
+.mobile-menu-toggle {
+	display: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 8px;
+	position: absolute;
+	top: auto;
+	right: 0.5em;
+	z-index: 1000;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+	transition: background-color 0.2s;
+}
+
+.mobile-menu-toggle:hover {
+	background: rgba(255,255,255,0.15);
+}
+
+.hamburger-line {
+	display: block;
+	width: 24px;
+	height: 3px;
+	background-color: silver;
+	margin: 2px 0;
+	transition: all 0.3s ease;
+	transform-origin: center;
+}
+
+/* Hamburger animation when active */
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+	transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+	opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+	transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+	/* Show mobile menu toggle button */
+	.mobile-menu-toggle {
+		display: flex !important;
+	}
+	
+	/* Hide navigation by default on mobile */
+	#header ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+		background: rgba(245, 245, 245, 0.95);
+		backdrop-filter: blur(10px);
+		border-top: 1px solid #ddd;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		text-align: left;
+		white-space: normal;
+		z-index: 999;
+		margin: 0;
+		padding: 0.5em 0;
+	}
+	
+	/* Show navigation when menu is open */
+	#header ul.mobile-menu-open {
+		display: block;
+	}
+	
+	#header ul li {
+		display: block;
+		margin: 0;
+		border-bottom: 1px solid #eee;
+	}
+	
+	#header ul li:last-child {
+		border-bottom: none;
+	}
+	
+	#header ul li a {
+		display: block;
+		padding: 0.8em 1em;
+		color: #333;
+		background: none;
+		border-radius: 0;
+		transition: background-color 0.2s;
+	}
+	
+	#header ul li a:hover {
+		background-color: rgba(51, 51, 153, 0.1);
+		color: #339;
+		border-bottom: none;
+	}
+	
+	/* Adjust header layout for mobile */
+	#header {
+		position: relative;
+		padding-right: 50px; /* Make room for hamburger button */
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#header {
+		padding-right: 45px;
+	}
+	
+	.mobile-menu-toggle {
+		width: 35px;
+		height: 35px;
+	}
+	
+	.hamburger-line {
+		width: 20px;
+		height: 2px;
+	}
+}
+/* @end */

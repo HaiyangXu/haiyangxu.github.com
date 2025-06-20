@@ -1,35 +1,30 @@
 ---
 layout: page
-title:  Haiyang Xu	
+title: Haiyang Xu	
 tagline: A Computer Vision Blog
-index: hide tilte at the front 
 ---
 {% include JB/setup %}
 
-
-
 {% for post in site.posts limit:5 %}
+<article class="post-preview">
+  <h2 class="post-title">
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </h2>
+  
+  <div class="post-meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}">
+      {{ post.date | date: "%B %-d, %Y" }}
+    </time>
+  </div>
 
- <h1 class="title"> <a class="title-link" href="{{ post.url }}">{{post.title}} </a> </h1>
-
-<div class="date emphnext">{{ post.date | date: "%B %-d, %Y"}}
-</div>
-
-<p>{{ post.excerpt }}  <a href="{{ post.url }}">Read more...</a> </p>
-
+  <div class="post-excerpt">
+    {{ post.excerpt }}
+    <a href="{{ post.url | relative_url }}" class="read-more">Read more...</a>
+  </div>
+</article>
 {% endfor %}
 
-
 ## Links
-[Coursera][coursera]   [GitHub][github]  [Mindhacks][mindhacks]
-
-
-
-
-
-[coursera]: https://www.coursera.org
-[github]: https://www.github.com 
-[mindhacks]: https://mindhacks.cn
-
-
-
+- [Coursera](https://www.coursera.org)
+- [GitHub](https://github.com/{{ site.author.github }})
+- [Mindhacks](http://mindhacks.cn)
