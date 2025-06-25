@@ -77,10 +77,10 @@ JB :
   
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
-  #  # Override this by defining an absolute path to assets here.
+  #
+  # Override this by defining an absolute path to assets here.
   # ex: 
-  #   http://s3.amazonaws.com/yoursite/themes/watermelon
-  #   /assets
+  #   http://s3.amazonaws.com/yoursite/themes/watermelon  #   /assets
   #
   ASSET_PATH: /assets/themes/mark-reid
 

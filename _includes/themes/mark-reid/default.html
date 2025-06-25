@@ -35,7 +35,8 @@
    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
    
    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"> </script>
-    <script type="text/javascript" >
+  
+   <script type="text/javascript" >
 	$(document).ready(function()
 	{
 		//$("#toc").append('<p>In this article:</p>');
@@ -50,26 +51,6 @@
         current.html() + "</a>");
 		}
 		});
-		
-		// Mobile menu toggle functionality
-		$('#mobile-menu-toggle').click(function() {
-			$('#nav-menu').toggleClass('mobile-menu-open');
-			$(this).toggleClass('active');
-		});
-		
-		// Close mobile menu when clicking on a link
-		$('#nav-menu a').click(function() {
-			$('#nav-menu').removeClass('mobile-menu-open');
-			$('#mobile-menu-toggle').removeClass('active');
-		});
-		
-		// Close mobile menu when clicking outside
-		$(document).click(function(event) {
-			if (!$(event.target).closest('#header').length) {
-				$('#nav-menu').removeClass('mobile-menu-open');
-				$('#mobile-menu-toggle').removeClass('active');
-			}
-		});
 	})
 	
 	
@@ -78,20 +59,13 @@
 </head>
 <body id="{{ page.section }}">
 <div id="site">
-    <div id="header">
+  
+  <div id="header">
     <h1 class="emphnext">
     	<a href="{{ HOME_PATH }}" title="{{ site.title }}">{{ site.title }}</a>
     	<span class="byline">&larr; <a href="{{ HOME_PATH }}">{{ site.tagline }}</a></span>
     </h1>
-    
-    <!-- Mobile menu toggle button -->
-    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-    
-    <ul class="nav" id="nav-menu">	    
+    <ul class="nav">	    
       <li><a class="home" href="{{ HOME_PATH }}">Home</a></li>
       <li><a  href="/about.html">About</a></li>
       <li><a  href="/archive.html">Archive</a></li>
